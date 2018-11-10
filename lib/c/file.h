@@ -1,6 +1,6 @@
 #ifndef FILE_H
     #define FILE_H
-    #define element_t int
+    #define element_t void*
 
     struct cellule_t {
         element_t donnee;

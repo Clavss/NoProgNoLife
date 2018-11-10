@@ -1,6 +1,6 @@
 #ifndef PILE_LISTE_H
     #define PILE_LISTE_H
-    #define element_t int
+    #define element_t void*
 
     struct cellule_t {
         element_t donnee;

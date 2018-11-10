@@ -1,6 +1,6 @@
 #ifndef PILE_TABLEAU_H
     #define PILE_TABLEAU_H
-    #define element_t int
+    #define element_t void*
 
     typedef struct {
         unsigned taille;

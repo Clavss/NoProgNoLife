@@ -20,6 +20,7 @@ Element nouvelleCellule(element_t donnee) {
 }
 
 int estVide(File file) {
+    assert(file != NULL);
     return (file->head == NULL);
 }
 
@@ -34,6 +35,7 @@ void enfiler(File file,element_t donnee) {
 }
 
 element_t defiler(File file) {
+    assert(!estVide(file));
     if (file->head == file->tail) {
         element_t retour = file->head->donnee;
         free(file->head);
@@ -55,7 +57,7 @@ void detruire(File file) {
     free(file);
 }
 
-/* EXEMPLE D'UTILISATION
+/*
 int main() {
     File file = nouvelleFile(10);
 
