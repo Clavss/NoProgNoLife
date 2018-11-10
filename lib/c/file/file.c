@@ -19,13 +19,13 @@ Element nouvelleCellule(element_t donnee) {
     return e;
 }
 
-int estVide(File file){
-    return(file->head == NULL);
+int estVide(File file) {
+    return (file->head == NULL);
 }
 
-void enfiler(File file,element_t donnee){
+void enfiler(File file,element_t donnee) {
     Element f = nouvelleCellule(donnee);
-    if(estVide(file)){
+    if (estVide(file)) {
         file->head = file->tail = nouvelleCellule(donnee);
         return;
     }
@@ -33,8 +33,8 @@ void enfiler(File file,element_t donnee){
     file->tail = f;
 }
 
-element_t defiler(File file){
-    if(file->head == file->tail){
+element_t defiler(File file) {
+    if (file->head == file->tail) {
         element_t retour = file->head->donnee;
         free(file->head);
         file->head = file->tail = NULL;
@@ -44,6 +44,7 @@ element_t defiler(File file){
     Element temp = file->head;
     element_t retour = temp->donnee;
     file->head = file->head->suivant;
+    
     return retour;
 }
 
