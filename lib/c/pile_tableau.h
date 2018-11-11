@@ -14,5 +14,5 @@
     int push(Pile*, element_t);
     element_t pop(Pile*);
     element_t sommet(Pile);
-    void detruire(Pile*);
+    void detruirePile(Pile*);
 #endif

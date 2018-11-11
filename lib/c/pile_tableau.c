@@ -39,7 +39,7 @@ element_t sommet(Pile pile) {
     return pile.tableau[pile.top];
 }
 
-void detruire(Pile *pile) {
+void detruirePile(Pile *pile) {
     free(pile->tableau);
     free(pile);
 }

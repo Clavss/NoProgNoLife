@@ -19,4 +19,5 @@
     int estVide(File);
     void enfiler(File, element_t);
     element_t defiler(File);
+    void detruireFile(File);
 #endif

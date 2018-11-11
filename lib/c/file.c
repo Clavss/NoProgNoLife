@@ -54,7 +54,7 @@ element_t defiler(File file) {
     return retour;
 }
 
-void detruire(File file) {
+void detruireFile(File file) {
     while (!estVide(file)) {
         defiler(file);
     }

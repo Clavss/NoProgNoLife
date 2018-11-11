@@ -38,7 +38,7 @@ element_t sommet(Pile pile) {
     return pile->donnee;
 }
 
-void detruire(Pile *pile) {
+void detruirePile(Pile *pile) {
     while (!estVide(*pile)) {
         pop(pile);
     }
