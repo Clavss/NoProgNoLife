@@ -10,7 +10,7 @@ for i in ../tests/$1/*
 do
     Input=$(cat $i | ./getInput.sh)
     Output=$(cat $i | ./getOutput.sh)
-    ResTest=$(echo ${Input} | ./$1/main)
+    ResTest=$(echo ${Input} | ./$1/c/main)
 
     if [ ${ResTest} != ${Output} ]
     then
