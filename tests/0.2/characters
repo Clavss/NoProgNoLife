@@ -1,0 +1,7 @@
+input
+#
+1    4 test 5 shouldnotbeconsidered
+#
+
+expected output
+_3_
