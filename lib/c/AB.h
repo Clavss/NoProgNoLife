@@ -9,10 +9,10 @@
     };
     typedef struct arbre *AB;
 
-    AB nouvelleAB(element_t donnee);
-    AB nouveauNoeud(AB gauche,element_t donnee,AB droite);
-    int estFeuille(AB ab);
-    AB filsGauche(AB ab);
-    AB filsDroit(AB ab);
+    AB nouvelAB(element_t);
+    AB nouveauNoeud(AB, element_t, AB);
+    int estFeuille(AB);
+    AB filsGauche(AB);
+    AB filsDroit(AB);
     
 #endif

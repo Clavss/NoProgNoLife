@@ -21,21 +21,25 @@ Element nouvelleCellule(element_t donnee) {
 
 int estVide(File file) {
     assert(file != NULL);
+
     return (file->head == NULL);
 }
 
 void enfiler(File file,element_t donnee) {
     Element f = nouvelleCellule(donnee);
+
     if (estVide(file)) {
         file->head = file->tail = nouvelleCellule(donnee);
         return;
     }
+
     file->tail->suivant = f;
     file->tail = f;
 }
 
 element_t defiler(File file) {
     assert(!estVide(file));
+
     if (file->head == file->tail) {
         element_t retour = file->head->donnee;
         free(file->head);
@@ -54,6 +58,7 @@ void detruire(File file) {
     while (!estVide(file)) {
         defiler(file);
     }
+    
     free(file);
 }
 
