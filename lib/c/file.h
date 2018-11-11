@@ -1,6 +1,6 @@
 #ifndef FILE_H
     #define FILE_H
-    #define element_t void*
+    #define element_t int
 
     struct cellule_t {
         element_t donnee;
@@ -16,7 +16,7 @@
     
     File nouvelleFile(element_t);
     Element nouvelleCellule(element_t);
-    int estVide(File);
+    int estFileVide(File);
     void enfiler(File, element_t);
     element_t defiler(File);
     void detruireFile(File);

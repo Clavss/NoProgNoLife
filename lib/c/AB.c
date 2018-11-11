@@ -39,51 +39,58 @@ AB filsDroit(AB ab) {
     }
 }
 
+element_t getDonnee(AB ab) {
+    assert(ab != NULL);
+
+    return ab->donnee;
+}
+
 int nbNoeud(AB ab) {
     if (ab == NULL) { return 0; }
 
     return nbNoeud(filsGauche(ab)) + nbNoeud(filsDroit(ab)) + 1;
 }
 
-AB* parcourLargeur(AB a) {
-    File f = nouvelleFile(a);
-    AB* liste = malloc(sizeof(long int) * nbNoeud(a));
-    int c = 0;
+void parcourPrefixe(AB a) {
+    printf("%d\n", getDonnee(a));
 
-    while (!estVide(f)) {
-        AB s = defiler(f);
-
-        if (filsGauche(s) != NULL) {
-            enfiler(f, filsGauche(s));
-        }
-
-        if (filsDroit(s) != NULL) {
-            enfiler(f, filsDroit(s));
-        }
-
-        liste[c++] = s;
+    AB fg = filsGauche(a);
+    if (fg != NULL) {
+        parcourPrefixe(fg);
     }
 
-    return liste;
+    AB fd = filsDroit(a);
+    if (fd != NULL) {
+        parcourPrefixe(fd);
+    }
 }
 
-/* EXEMPLE D'UTILISATION */
+void detruireArbre(AB a) {
+    AB fg = filsGauche(a);
+    if (fg != NULL) {
+        detruireArbre(fg);
+    }
+
+    AB fd = filsDroit(a);
+    if (fd != NULL) {
+        detruireArbre(fd);
+    }
+
+    free(a);
+}
+
+/* EXEMPLE D'UTILISATION
 int main() {
     //créé un arbre avec 1 en racine, 2 en fils gauche et 3 en fils droit
-    element_t test = malloc(sizeof(int));
-    element_t test2 = malloc(sizeof(int));
-    element_t test3 = malloc(sizeof(int));
-    *(int*) test = 1;
-    *(int*) test2 = 2;
-    *(int*) test3 = 3;
-    AB ab = nouveauNoeud(nouvelAB(test2), test, nouvelAB(test3));
+    element_t test1 = 1;
+    element_t test2 = 2;
+    element_t test3 = 3;
+    AB ab = nouveauNoeud(nouvelAB(test2), test1, nouvelAB(test3));
 
-    //parcours en largeur
-    AB* sortie = parcourLargeur(ab);
+    parcourPrefixe(ab);
 
-    for (int i = 0; i < nbNoeud(ab); i++) {
-        printf("%d\n", *(int*)sortie[i]->donnee);
-    }
+    detruireArbre(ab);
 
     return 0;
 }
+*/

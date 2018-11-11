@@ -19,16 +19,16 @@ Element nouvelleCellule(element_t donnee) {
     return e;
 }
 
-int estVide(File file) {
+int estFileVide(File file) {
     assert(file != NULL);
 
     return (file->head == NULL);
 }
 
-void enfiler(File file,element_t donnee) {
+void enfiler(File file, element_t donnee) {
     Element f = nouvelleCellule(donnee);
 
-    if (estVide(file)) {
+    if (estFileVide(file)) {
         file->head = file->tail = nouvelleCellule(donnee);
         return;
     }
@@ -38,7 +38,7 @@ void enfiler(File file,element_t donnee) {
 }
 
 element_t defiler(File file) {
-    assert(!estVide(file));
+    assert(!estFileVide(file));
 
     if (file->head == file->tail) {
         element_t retour = file->head->donnee;
@@ -55,26 +55,26 @@ element_t defiler(File file) {
 }
 
 void detruireFile(File file) {
-    while (!estVide(file)) {
+    while (!estFileVide(file)) {
         defiler(file);
     }
     
     free(file);
 }
 
-/*
+/* EXEMPLE D'UTILISATION
 int main() {
     File file = nouvelleFile(10);
 
     enfiler(file, 20);
     enfiler(file, 30);
 
-    while(!estVide(file)){
+    while(!estFileVide(file)) {
         printf("%d defiler\n", defiler(file));
     }
 
     enfiler(file, 30);
-    detruire(file);
+    detruireFile(file);
 
     return 0;
 }

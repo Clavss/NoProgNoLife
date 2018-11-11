@@ -16,7 +16,7 @@ int estPleine(Pile pile) {
     return pile.top == pile.taille - 1;
 }
 
-int estVide(Pile pile) {
+int estPileVide(Pile pile) {
     return pile.top == -1;
 }
 
@@ -28,13 +28,13 @@ int push(Pile *pile, element_t element) {
 }
 
 element_t pop(Pile *pile) {
-    assert(!estVide(*pile));
+    assert(!estPileVide(*pile));
 
     return pile->tableau[pile->top--];
 }
 
 element_t sommet(Pile pile) {
-    assert(!estVide(pile));
+    assert(!estPileVide(pile));
 
     return pile.tableau[pile.top];
 }
@@ -54,7 +54,7 @@ int main() {
     printf("%d popped from stack\n", pop(pile));
     printf("Top element is %d\n", sommet(*pile)); 
 
-    detruire(pile);
+    detruirePile(pile);
 
     return 0;
 }
