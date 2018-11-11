@@ -1,7 +1,9 @@
-/*
-un tableau tab de taille : taille
-résultat : tri par ordre croissant
+#ifndef TRI_H
+    #define TRI_H
 
-
-*/
-void tri (int tab[],int taille);
+    /*
+    un tableau tab de taille : taille
+    resultat : tri par ordre croissant
+    */
+    void tri(int, int);
+#endif
