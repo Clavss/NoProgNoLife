@@ -6,6 +6,9 @@ then
     exit 1
 fi
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+
 for i in ../tests/$1/*
 do
     Input=$(cat $i | ./getInput.sh)
@@ -14,8 +17,8 @@ do
 
     if [ ${ResTest} != ${Output} ]
     then
-        echo "$i failed"
+        echo -e "${RED}$i failed"
     else
-        echo "$i passed"
+        echo -e "${GREEN}$i passed"
     fi
 done
