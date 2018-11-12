@@ -10,8 +10,8 @@
 
     Pile nouvelleCellule(element_t);
     void push(Pile*, element_t);
-    int estVide(Pile);
+    int estPileVide(Pile);
     element_t pop(Pile*);
     element_t sommet(Pile);
-    void detruire(Pile*);
+    void detruirePile(Pile*);
 #endif

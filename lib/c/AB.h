@@ -1,6 +1,6 @@
 #ifndef AB_H
     #define AB_H
-    #define element_t void*
+    #define element_t int
 
     struct arbre {
         element_t donnee;
@@ -9,10 +9,12 @@
     };
     typedef struct arbre *AB;
 
-    AB nouvelleAB(element_t donnee);
-    AB nouveauNoeud(AB gauche,element_t donnee,AB droite);
-    int estFeuille(AB ab);
-    AB filsGauche(AB ab);
-    AB filsDroit(AB ab);
-    
+    AB nouvelAB(element_t);
+    AB nouveauNoeud(AB, element_t, AB);
+    AB filsGauche(AB);
+    AB filsDroit(AB);
+    int estFeuille(AB);
+    element_t getDonnee(AB);
+    void parcourPrefixe(AB);
+    void detruireArbre(AB);
 #endif

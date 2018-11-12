@@ -17,12 +17,12 @@ void push(Pile *pile, element_t donnee) {
     *pile = new_pile;
 }
 
-int estVide(Pile pile) {
+int estPileVide(Pile pile) {
     return (pile == NULL);
 }
 
 element_t pop(Pile *pile) {
-    assert(!estVide(*pile));
+    assert(!estPileVide(*pile));
 
     Pile temp = *pile;
     *pile = (*pile)->suivant;
@@ -33,13 +33,13 @@ element_t pop(Pile *pile) {
 }
 
 element_t sommet(Pile pile) {
-    assert(!estVide(pile));
+    assert(!estPileVide(pile));
 
     return pile->donnee;
 }
 
-void detruire(Pile *pile) {
-    while (!estVide(*pile)) {
+void detruirePile(Pile *pile) {
+    while (!estPileVide(*pile)) {
         pop(pile);
     }
 }
@@ -54,7 +54,7 @@ int main() {
     printf("%d popped from stack\n", pop(&pile));
     printf("Top element is %d\n", sommet(pile));
 
-    detruire(&pile);
+    detruirePile(&pile);
 
     return 0;
 }

@@ -1,6 +1,6 @@
 #ifndef PILE_TABLEAU_H
     #define PILE_TABLEAU_H
-    #define element_t void*
+    #define element_t int
 
     typedef struct {
         unsigned taille;
@@ -10,9 +10,9 @@
 
     Pile* creerPile(unsigned);
     int estPleine(Pile);
-    int estVide(Pile);
+    int estPileVide(Pile);
     int push(Pile*, element_t);
     element_t pop(Pile*);
     element_t sommet(Pile);
-    void detruire(Pile*);
+    void detruirePile(Pile*);
 #endif
