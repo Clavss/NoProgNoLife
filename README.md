@@ -2,5 +2,5 @@
 We were a group of 4 students who participated in a one week contest.  
 It was a rush, not everything is 100% complete.  
 
-# “As long as there's a way to win the game, the Blank will not know defeat.”  
+### “As long as there's a way to win the game, the Blank will not know defeat.”  
 We won :)  
