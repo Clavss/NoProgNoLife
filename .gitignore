@@ -1,0 +1,4 @@
+./lib/c/*.o
+
+./src/*/*/main
+./src/*/*/main.o

@@ -1,0 +1,15 @@
+input
+#k
+6
+8
+d
+jfdc
+jgkick
+hkk
+akje
+defb
+kaf
+fbfie#
+
+expected output
+_16 defb hkk jgkick kaf_

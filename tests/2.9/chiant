@@ -1,0 +1,12 @@
+input
+#d
+4
+5
+abc
+abbc
+aabd
+acd
+b#
+
+expected output
+_4 acd b_

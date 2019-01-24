@@ -1,0 +1,17 @@
+input
+#k
+2
+10
+ab
+bc
+cd
+de
+ef
+fg
+gh
+hi
+ij
+jk#
+
+expected output
+_12 ab bc de fg hi jk_

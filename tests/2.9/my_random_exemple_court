@@ -1,0 +1,12 @@
+input
+#f
+2
+5
+ab
+bc
+cd
+de
+ef#
+
+expected output
+_6 ab cd ef_

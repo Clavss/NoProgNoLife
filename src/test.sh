@@ -15,9 +15,11 @@ do
     Output=$(cat $i | ./getOutput.sh)
     ResTest=$(echo ${Input} | ./$1/c/main)
 
-    if [ ${ResTest} != ${Output} ]
+    if [[ ${Output} != ${ResTest} ]]
     then
         echo -e "${RED}$i failed"
+        echo "OUTPUT: ${Output}"
+        echo "RESTEST: ${ResTest}"
     else
         echo -e "${GREEN}$i passed"
     fi

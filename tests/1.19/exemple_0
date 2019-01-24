@@ -1,0 +1,10 @@
+input
+#5 4
+SO.N.
+..S..
+..XE.
+ENEON
+1#
+
+expected output
+_SEONOSEN_

@@ -1,0 +1,10 @@
+input
+#c
+4
+3
+aab
+bbc
+cccc#
+
+expected output
+_6 aab bbc_

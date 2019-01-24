@@ -1,0 +1,11 @@
+input
+#
+3 3
+O.N
+EXN
+S..
+4
+#
+
+expected output
+_EOS_

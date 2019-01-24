@@ -1,0 +1,10 @@
+input
+#10 4
+......E...
+X.....E...
+......N..E
+O.....S..S
+2#
+
+expected output
+_ENESSO_
